@@ -79,11 +79,13 @@ function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   useEffect(() => {
-    if (isMenuOpen) {
-      document.body.style.overflowY = "hidden";
-    } else {
-      document.body.style.overflowY = "visible";
-    }
+    document.body.style.overflowY = isMenuOpen ? "hidden" : "visible";
+
+    window.addEventListener("resize", (e) => {
+      if (window.innerWidth > 1150) {
+        setIsMenuOpen(false);
+      }
+    });
   }, [isMenuOpen]);
   return (
     <Header className="header">

@@ -16,6 +16,9 @@ const Nav = styled.nav`
   &.active {
     transform: translateY(0);
   }
+  @media (min-width: 1150px) {
+    display: none;
+  }
 `;
 const Menu = styled.ul`
   list-style: none;

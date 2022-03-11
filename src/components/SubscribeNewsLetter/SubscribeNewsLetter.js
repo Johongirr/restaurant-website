@@ -41,6 +41,14 @@ const NewsletterInput = styled.input`
   padding: 13px;
   border-radius: 5px;
   background: transparent;
+  color: #dcca87;
+  font-family: "Cormorant Upright";
+  font-size: 1.05rem;
+  &::placeholder {
+    color: #dcca87;
+    font-family: "Cormorant Upright";
+    font-size: 1.05rem;
+  }
 `;
 
 function SubscribeNewsLetter() {
